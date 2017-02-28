@@ -1,4 +1,3 @@
-//TODO: getSize method
 //TODO: delete method (index)
 //TODO: get method (index)
 //TODO: switch method?
@@ -20,5 +19,17 @@ public class LinkedList {
 		}
 		currentHead.setNext(newNode);
 		listSize++;
+	}
+	
+	public int getSize(){
+		return listSize;
+	}
+	
+	public int getValue(int index){ //Get the value of the node at a specified index
+		Node currentHead = head;
+		for(int i=0; i<index+1; i++){ //Until we've reached the index+1 (so we can count from 0..n-1)
+			if(currentHead.getNext()!=null) currentHead=currentHead.getNext(); //Move the head if the next isn't null
+		}
+		return currentHead.getValue();
 	}
 }
