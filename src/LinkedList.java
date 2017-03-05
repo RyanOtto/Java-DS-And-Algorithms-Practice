@@ -23,19 +23,18 @@ public class LinkedList {
 		return listSize;
 	}
 	
-	public int getValue(int index){ //Get the value of a node at specified index
+	public Node get(int index){
 		Node currentHead = head;
-		if(currentHead==null) return -1;
+		if(currentHead==null) return null;
 		else for(int i=0; i<index+1; i++){ //Until we've reached the index+1 (so we can count from 0..n-1)
 			if(currentHead.getNext()!=null) currentHead=currentHead.getNext(); //Move the head if the next isn't null
-			else return -1;
+			else return null;
 		}
-		return currentHead.getValue();
+		return currentHead;
 	}
 	
 	public void delete(int index){ //Delete a node at specified index
 		Node currentHead = head;
-		Node temp;
 		if(listSize==1){
 			head=null;
 			listSize--;
@@ -45,7 +44,17 @@ public class LinkedList {
 			if(currentHead.getNext()!=null) currentHead=currentHead.getNext(); 
 			else return;
 		}
-		currentHead.setNext(currentHead.getNext().getNext());//Once node is found, set its head to the next's next
+		currentHead.setNext(currentHead.getNext().getNext());//Once node in the middle is found, set its head to the next's next
 		listSize--;
+	}
+	
+	public String toString(){
+		String result="";
+		Node currentHead=head;
+		while(currentHead.next!=null){
+			currentHead=currentHead.next;
+			result=result+currentHead.getValue()+" ";
+		}
+		return result;
 	}
 }
