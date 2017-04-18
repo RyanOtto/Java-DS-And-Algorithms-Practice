@@ -18,12 +18,19 @@ public class Main {
 //		System.out.println(myList.toString());
 //		System.out.println(myList.getValue(7));
 		
-		Queue myQueue = new Queue();
-		myQueue.enqueue(1);
-		myQueue.enqueue(30);
-		System.out.println(myQueue.peek().getValue());
-		myQueue.dequeue();
-		System.out.println(myQueue.peek().getValue());
+//		Queue myQueue = new Queue();
+//		myQueue.enqueue(1);
+//		myQueue.enqueue(30);
+//		System.out.println(myQueue.peek().getValue());
+//		myQueue.dequeue();
+//		System.out.println(myQueue.peek().getValue());
+		
+		Stack myStack = new Stack();
+		myStack.push(20);
+		System.out.println( myStack.peek().getValue() );	
+		myStack.push(40);
+		System.out.println( myStack.peek().getValue() );	
+		myStack.push(60);
+		System.out.println( myStack.peek().getValue() );	
 	}
-
 }
