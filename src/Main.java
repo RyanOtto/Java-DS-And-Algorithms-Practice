@@ -33,15 +33,25 @@ public class Main {
 //		myStack.push(60);
 //		System.out.println( myStack.peek().getValue() );
 		
-        BinaryTree tree = new BinaryTree(10);
-    	BSTNode n1 = new BSTNode(5);
-        BSTNode n2 = new BSTNode(15);
-
-        tree.add(tree.getRoot(), n1, "left");   
-        tree.add(tree.getRoot(), n2, "right");            
-        
-        System.out.println(tree.getRoot().getKey());
-        System.out.println(tree.getRoot().getLeft().getKey());
-        System.out.println(tree.getRoot().getRight().getKey());
+//        BinaryTree tree = new BinaryTree(10);
+//    	BSTNode n1 = new BSTNode(5);
+//        BSTNode n2 = new BSTNode(15);
+//
+//        tree.add(tree.getRoot(), n1, "left");   
+//        tree.add(tree.getRoot(), n2, "right");            
+//        
+//        System.out.println(tree.getRoot().getKey());
+//        System.out.println(tree.getRoot().getLeft().getKey());
+//        System.out.println(tree.getRoot().getRight().getKey());
+		
+		HashMap hm = new HashMap();
+		hm.put(0, 20);
+		hm.put(1, 100);
+		hm.put(1, 150);
+		hm.put(1, 2000);
+		System.out.println(hm.get(0));
+		System.out.println(hm.get(1));
+		System.out.println(hm.get(2));
+		System.out.println(hm.get(3));
 	}
 }
