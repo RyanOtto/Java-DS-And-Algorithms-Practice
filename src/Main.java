@@ -25,12 +25,23 @@ public class Main {
 //		myQueue.dequeue();
 //		System.out.println(myQueue.peek().getValue());
 		
-		Stack myStack = new Stack();
-		myStack.push(20);
-		System.out.println( myStack.peek().getValue() );	
-		myStack.push(40);
-		System.out.println( myStack.peek().getValue() );	
-		myStack.push(60);
-		System.out.println( myStack.peek().getValue() );	
+//		Stack myStack = new Stack();
+//		myStack.push(20);
+//		System.out.println( myStack.peek().getValue() );	
+//		myStack.push(40);
+//		System.out.println( myStack.peek().getValue() );	
+//		myStack.push(60);
+//		System.out.println( myStack.peek().getValue() );
+		
+        BinaryTree tree = new BinaryTree(10);
+    	BSTNode n1 = new BSTNode(5);
+        BSTNode n2 = new BSTNode(15);
+
+        tree.add(tree.getRoot(), n1, "left");   
+        tree.add(tree.getRoot(), n2, "right");            
+        
+        System.out.println(tree.getRoot().getKey());
+        System.out.println(tree.getRoot().getLeft().getKey());
+        System.out.println(tree.getRoot().getRight().getKey());
 	}
 }
