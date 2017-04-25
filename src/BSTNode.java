@@ -1,13 +1,10 @@
 public class BSTNode {
 
 	private int key;
-	private BSTNode left;
-	private BSTNode right;
+	BSTNode left, right;
 
 	BSTNode(int key) {
 		this.key = key;
-		right = null;
-		left = null;
 	}
 
 	public void setKey(int key) {

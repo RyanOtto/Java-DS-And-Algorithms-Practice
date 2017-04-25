@@ -1,3 +1,7 @@
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class Main {
 
@@ -33,25 +37,45 @@ public class Main {
 //		myStack.push(60);
 //		System.out.println( myStack.peek().getValue() );
 		
-//        BinaryTree tree = new BinaryTree(10);
-//    	BSTNode n1 = new BSTNode(5);
-//        BSTNode n2 = new BSTNode(15);
-//
-//        tree.add(tree.getRoot(), n1, "left");   
-//        tree.add(tree.getRoot(), n2, "right");            
-//        
-//        System.out.println(tree.getRoot().getKey());
-//        System.out.println(tree.getRoot().getLeft().getKey());
-//        System.out.println(tree.getRoot().getRight().getKey());
+        BinaryTree tree = new BinaryTree(10);
+    	BSTNode n1 = new BSTNode(5);
+        BSTNode n2 = new BSTNode(15);
+
+        tree.insert(1);   
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(50);
+        tree.insert(40);
+        
+        tree.inOrder();
+        tree.preOrder();
+        tree.postOrder();
+        
+        System.out.println(tree.search(50).getLeft().getKey());
 		
-		HashMap hm = new HashMap();
-		hm.put(0, 20);
-		hm.put(1, 100);
-		hm.put(1, 150);
-		hm.put(1, 2000);
-		System.out.println(hm.get(0));
-		System.out.println(hm.get(1));
-		System.out.println(hm.get(2));
-		System.out.println(hm.get(3));
+//		HashMap hm = new HashMap();
+//		hm.put(0, 20);
+//		hm.put(1, 100);
+//		hm.put(1, 150);
+//		hm.put(1, 2000);
+//		System.out.println(hm.get(0));
+//		System.out.println(hm.get(1));
+//		System.out.println(hm.get(2));
+//		System.out.println(hm.get(3));
+		
+//		TreeMap tm = new TreeMap();
+//	    tm.put("Alison", new Integer(1));
+//	    tm.put("Pif", new Integer(2));
+//	    tm.put("Sona", new Integer(3));
+//	    tm.put("Jose", new Integer(4));
+//	    tm.put("Lilian", new Integer(5));
+//	    
+//	    //Place tm's contents into a set, use an iterator to go through the set, ouptut each key-value pair
+//	    Set set = tm.entrySet();
+//	    Iterator i = set.iterator();
+//	    while(i.hasNext()) {
+//	       Map.Entry me = (Map.Entry)i.next();
+//	       System.out.print(me.getKey() + ": ");
+//	       System.out.println(me.getValue());
+	    }
 	}
-}

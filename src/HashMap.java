@@ -1,6 +1,6 @@
 public class HashMap {
 
-	private final static int TABLE_SIZE = 128;
+	private final static int TABLE_SIZE = 1;
 	HashEntry[] table;
 
 	HashMap() {
@@ -24,8 +24,8 @@ public class HashMap {
 	}
 
 	public void put(int key, int value) {
-		if(this.isFull()) return;
-		int hash = (key % TABLE_SIZE);
+		if(isFull()) return;
+		int hash = (key % TABLE_SIZE); 
 		while (table[hash] != null) { //In case of collision
 			hash = (hash + 1) % TABLE_SIZE; //Try the next entry
 		}
