@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -37,22 +38,22 @@ public class Main {
 //		myStack.push(60);
 //		System.out.println( myStack.peek().getValue() );
 		
-        BinaryTree tree = new BinaryTree(10);
-    	BSTNode n1 = new BSTNode(5);
-        BSTNode n2 = new BSTNode(15);
-
-        tree.insert(1);   
-        tree.insert(2);
-        tree.insert(3);
-        tree.insert(50);
-        tree.insert(40);
-        
-        tree.inOrder();
-        tree.preOrder();
-        tree.postOrder();
-        
-        System.out.println(tree.search(50).getLeft().getKey());
-		
+//        BinaryTree tree = new BinaryTree(10);
+//    	BSTNode n1 = new BSTNode(5);
+//        BSTNode n2 = new BSTNode(15);
+//
+//        tree.insert(1);   
+//        tree.insert(2);
+//        tree.insert(3);
+//        tree.insert(50);
+//        tree.insert(40);
+//        
+//        tree.inOrder();
+//        tree.preOrder();
+//        tree.postOrder();
+//        
+//        System.out.println(tree.search(50).getLeft().getKey());
+//		
 //		HashMap hm = new HashMap();
 //		hm.put(0, 20);
 //		hm.put(1, 100);
@@ -77,5 +78,35 @@ public class Main {
 //	       Map.Entry me = (Map.Entry)i.next();
 //	       System.out.print(me.getKey() + ": ");
 //	       System.out.println(me.getValue());
-	    }
+		
+		int[] myArray = {2,3,1,6,5,7,8};
+		System.out.println("Array before sorting: " + Arrays.toString(myArray));
+		quickSort(myArray, 0, myArray.length-1);
+		System.out.println("Array after sorting: " + Arrays.toString(myArray));
+}
+	
+	
+		public static void quickSort(int[] array, int left, int right) {
+			if (array == null || array.length == 0) return;
+			if (left >= right) return;
+	 
+			int middle = left + (right - left) / 2;
+			int i = left, j = right;
+			
+			while (i <= j) {
+				while (array[i] < array[middle]) i++;
+				while (array[j] > array[middle]) j--;
+				
+				if (i <= j) {
+					int temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
+					i++;
+					j--;
+				}
+			}
+	 
+			if (left < j) quickSort(array, left, j);
+			if (right > i) quickSort(array, i, right);
+		}
 	}
