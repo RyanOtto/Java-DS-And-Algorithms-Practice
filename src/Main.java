@@ -79,7 +79,6 @@ public class Main {
 //	       System.out.print(me.getKey() + ": ");
 //	       System.out.println(me.getValue());
 		
-		int[] myArray = {2,3,1,6,5,7,8};
 		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 		quickSort(myArray, 0, myArray.length-1);
 		System.out.println("Array after sorting: " + Arrays.toString(myArray));
@@ -93,7 +92,7 @@ public class Main {
 			int middle = left + (right - left) / 2;
 			int i = left, j = right;
 			
-			while (i <= j) {
+			while (i < j) {
 				while (array[i] < array[middle]) i++;
 				while (array[j] > array[middle]) j--;
 				
