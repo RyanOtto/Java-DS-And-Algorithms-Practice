@@ -86,13 +86,25 @@ public class Main {
 		
 		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 //		quickSort(myArray, 0, myArray.length-1);
-		mergeSort(myArray, 0, myArray.length-1);
+//		mergeSort(myArray, 0, myArray.length-1);
+		bubbleSort(myArray);
 		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 }
-
-	
-	
-	
+		
+		
+		public static void bubbleSort(int[] array){
+			for(int i=array.length-1; i>1; i--){ //Decrease max index each loop
+				for(int j=0; j<i; j++){ //For all the elements in that max index, get the highest value to the end
+					if(array[j]>array[j+1]){ //To sort in ascending order, switching lower left values with higher right values
+						int temp=0;
+						temp=array[j+1];
+						array[j+1]=array[j];
+						array[j]=temp;
+					}
+				}
+			}
+		}
+		
 		public static void quickSort(int[] array, int left, int right) {
 			if (array == null || array.length == 0) return;
 			if (left >= right) return;
