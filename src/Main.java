@@ -79,7 +79,7 @@ public class Main {
 //	       System.out.print(me.getKey() + ": ");
 //	       System.out.println(me.getValue());
 		
-		int[] myArray = {2,3,1,6,5,7,8,1,8,10,20,100,50,25,34,46,58};
+		int[] myArray = {2,3,1,6,5,7,8,1,8,10,20,100,50,40,30,300,20,10};
 //		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 //		quickSort(myArray, 0, myArray.length-1);
 //		System.out.println("Array after sorting: " + Arrays.toString(myArray));
@@ -87,13 +87,28 @@ public class Main {
 		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 //		quickSort(myArray, 0, myArray.length-1);
 //		mergeSort(myArray, 0, myArray.length-1);
-		bubbleSort(myArray);
+//		bubbleSort(myArray);
+		selectionSort(myArray);
 		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 }
+	
 		
+		public static void selectionSort(int[] array){
+	        for (int i=0; i<array.length-1; i++){
+	        	int min=i;
+	            for (int j=i; j<array.length; j++){
+	            	if (array[j] < array[min]) min = j; //If we've found new min number, set min index to its index
+	            }
+	            
+	            //Switch array element i with the new minimum value
+	            int temp = array[min];  
+	            array[min] = array[i]; 
+	            array[i] = temp;
+	        }
+	    }
 		
 		public static void bubbleSort(int[] array){
-			for(int i=array.length-1; i>1; i--){ //Decrease max index each loop
+			for(int i=array.length-1; i>0; i--){ //Decrease max index each loop
 				for(int j=0; j<i; j++){ //For all the elements in that max index, get the highest value to the end
 					if(array[j]>array[j+1]){ //To sort in ascending order, switching lower left values with higher right values
 						int temp=0;
@@ -128,10 +143,7 @@ public class Main {
 			if (left < j) quickSort(array, left, j);
 			if (right > i) quickSort(array, i, right);
 		}
-		
-		
-		
-		
+			
 	    private static void mergeSort(int[] array, int left, int right) {
 	        if(left < right) { //If there's more than 1 element in the list
 	            int center = (left + right) / 2; //Center point for list splitting
