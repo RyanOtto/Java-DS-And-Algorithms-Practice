@@ -88,11 +88,46 @@ public class Main {
 //		quickSort(myArray, 0, myArray.length-1);
 //		mergeSort(myArray, 0, myArray.length-1);
 //		bubbleSort(myArray);
-		selectionSort(myArray);
+//		selectionSort(myArray);
+//		insertionSort(myArray);
+		shellSort(myArray);
 		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 }
 	
-		
+	  public static void shellSort(int[] array) {
+		    int inner, outer, temp, h=1;
+		    
+		    while (h <= array.length/3) {
+		      h=h*3+1;
+		    }
+		    while (h > 0) {
+		      for (outer=h; outer < array.length; outer++) {
+		        temp=array[outer];
+		        inner=outer;
+		 
+		        while(inner > h-1 && array[inner-h] >= temp) {
+		          array[inner]=array[inner-h];
+		          inner-=h;
+		        }
+		        array[inner]=temp;
+		      }
+		      h=(h-1)/3;
+		    }
+	  }
+	
+	  
+	   public static void insertionSort(int[] array){
+		   for(int i=1; i<array.length; i++){
+			   int j=i;
+			   int insertNum=array[i];
+			   while(j>0 && array[j-1] > insertNum){
+				   array[j]=array[j-1];
+				   j--;
+			   }
+			   array[j]=insertNum;
+		   }
+	   }
+	
 		public static void selectionSort(int[] array){
 	        for (int i=0; i<array.length-1; i++){
 	        	int min=i;
