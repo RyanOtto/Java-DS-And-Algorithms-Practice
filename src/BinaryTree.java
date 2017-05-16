@@ -65,8 +65,8 @@ public class BinaryTree
   	  if(current==null) return;
 
 	  System.out.print(current.getKey() + " ");
-	  inOrder(current.getLeft());
-	  inOrder(current.getRight());
+	  preOrder(current.getLeft());
+	  preOrder(current.getRight());
 	}
     
 	
@@ -79,8 +79,8 @@ public class BinaryTree
     private void postOrder(BSTNode current){
   	  if(current==null) return;
 
-	  inOrder(current.getLeft());
-	  inOrder(current.getRight());
+	  postOrder(current.getLeft());
+	  postOrder(current.getRight());
 	  System.out.print(current.getKey() + " ");
     }
 }

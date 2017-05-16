@@ -38,19 +38,20 @@ public class Main {
 //		myStack.push(60);
 //		System.out.println( myStack.peek().getValue() );
 		
-//        BinaryTree tree = new BinaryTree(10);
-//    	BSTNode n1 = new BSTNode(5);
-//        BSTNode n2 = new BSTNode(15);
-//
-//        tree.insert(1);   
-//        tree.insert(2);
-//        tree.insert(3);
-//        tree.insert(50);
-//        tree.insert(40);
-//        
-//        tree.inOrder();
-//        tree.preOrder();
-//        tree.postOrder();
+        BinaryTree tree = new BinaryTree(10);
+    	BSTNode n1 = new BSTNode(5);
+    	BSTNode n2 = new BSTNode(15);
+
+        tree.insert(1);   
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(50);
+        tree.insert(40);
+        tree.insert(55);
+        
+        tree.inOrder();
+        tree.preOrder();
+        tree.postOrder();
 //        
 //        System.out.println(tree.search(50).getLeft().getKey());
 //		
