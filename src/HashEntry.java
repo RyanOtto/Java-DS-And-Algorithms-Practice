@@ -1,5 +1,4 @@
 public class HashEntry {
-
 	private int key;
 	private int value;
 

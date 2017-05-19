@@ -3,24 +3,23 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-
 public class Main {
-
 	public static void main(String[] args) {
 		
-//		LinkedList myList = new LinkedList();
-//		myList.add(20);
-//		myList.add(40);
-//		myList.add(60);
-//		myList.add(80);
-//		myList.add(100);
+		LinkedList myList = new LinkedList();
+		myList.add(20);
+		myList.add(40);
+		myList.add(60);
+		myList.add(80);
+		myList.add(100);
 //		System.out.println(myList.get(1).getValue());
 //		System.out.println("Size: " + myList.getSize());
-//		myList.delete(1); //Delete the 40
-//		myList.delete(0); //Delete the 20
+		myList.delete(1); 
+		System.out.println(myList.toString());
+		myList.delete(3); 
 //		System.out.println("Size: " + myList.getSize());
 //		System.out.println(myList.get(0).getValue());
-//		System.out.println(myList.toString());
+		System.out.println(myList.toString());
 //		System.out.println(myList.getValue(7));
 		
 //		Queue myQueue = new Queue();
@@ -38,20 +37,20 @@ public class Main {
 //		myStack.push(60);
 //		System.out.println( myStack.peek().getValue() );
 		
-        BinaryTree tree = new BinaryTree(10);
-    	BSTNode n1 = new BSTNode(5);
-    	BSTNode n2 = new BSTNode(15);
-
-        tree.insert(1);   
-        tree.insert(2);
-        tree.insert(3);
-        tree.insert(50);
-        tree.insert(40);
-        tree.insert(55);
-        
-        tree.inOrder();
-        tree.preOrder();
-        tree.postOrder();
+//        BinaryTree tree = new BinaryTree(10);
+//    	BSTNode n1 = new BSTNode(5);
+//    	BSTNode n2 = new BSTNode(15);
+//
+//        tree.insert(1);   
+//        tree.insert(2);
+//        tree.insert(3);
+//        tree.insert(50);
+//        tree.insert(40);
+//        tree.insert(55);
+//        
+//        tree.inOrder();
+//        tree.preOrder();
+//        tree.postOrder();
 //        
 //        System.out.println(tree.search(50).getLeft().getKey());
 //		
@@ -80,19 +79,19 @@ public class Main {
 //	       System.out.print(me.getKey() + ": ");
 //	       System.out.println(me.getValue());
 		
-		int[] myArray = {2,3,1,6,5,7,8,1,8,10,20,100,50,40,30,300,20,10};
+//		int[] myArray = {2,3,1,6,5,7,8,1,8,10,20,100,50,40,30,300,20,10};
 //		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 //		quickSort(myArray, 0, myArray.length-1);
 //		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 		
-		System.out.println("Array before sorting: " + Arrays.toString(myArray));
+//		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 //		quickSort(myArray, 0, myArray.length-1);
 //		mergeSort(myArray, 0, myArray.length-1);
 //		bubbleSort(myArray);
 //		selectionSort(myArray);
 //		insertionSort(myArray);
-		shellSort(myArray);
-		System.out.println("Array after sorting: " + Arrays.toString(myArray));
+//		shellSort(myArray);
+//		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 }
 	
 	  public static void shellSort(int[] array) {

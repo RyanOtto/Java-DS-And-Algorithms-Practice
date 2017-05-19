@@ -1,5 +1,4 @@
 public class HashMap {
-
 	private final static int TABLE_SIZE = 1;
 	HashEntry[] table;
 
@@ -13,7 +12,7 @@ public class HashMap {
 	public int get(int key) {
 		int hash = (key % TABLE_SIZE);
 
-		while (table[hash] != null && table[hash].getKey() != key) {
+		while(table[hash] != null && table[hash].getKey() != key) {
 			hash = (hash + 1) % TABLE_SIZE;
 		}
 
@@ -39,5 +38,4 @@ public class HashMap {
 		}
 		return true;
 	}
-
 }

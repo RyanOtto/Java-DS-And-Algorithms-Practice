@@ -28,4 +28,3 @@ public class Stack {
 		return list.get(list.getSize()-1);
 	}
 }
-

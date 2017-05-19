@@ -1,5 +1,4 @@
 public class BSTNode {
-
 	private int key;
 	BSTNode left, right;
 

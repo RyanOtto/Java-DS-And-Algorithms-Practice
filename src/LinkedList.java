@@ -1,5 +1,3 @@
-//TODO: getAll(LinkedList myList)
-
 public class LinkedList {
 	private Node head;
 	private int listSize;
@@ -11,11 +9,11 @@ public class LinkedList {
 	
 	public void add(int value){
 		Node newNode = new Node(null, value);
-		Node currentHead = head;
-		while(currentHead.getNext()!=null){ //Go to last element
-			currentHead=currentHead.getNext();
+		Node current = head;
+		while(current.getNext()!=null){ //Go to last element
+			current=current.getNext();
 		}
-		currentHead.setNext(newNode);
+		current.setNext(newNode); //Set old last node's next to the new last node
 		listSize++;
 	}
 	
@@ -34,17 +32,17 @@ public class LinkedList {
 	}
 	
 	public void delete(int index){ //Delete a node at specified index
-		Node currentHead = head;
+		Node current = head;
 		if(listSize==1){
 			head=null;
 			listSize--;
 			return;
 		}
 		else for(int i=0; i<index; i++){ //Find previous node
-			if(currentHead.getNext()!=null) currentHead=currentHead.getNext(); 
+			if(current.getNext()!=null) current=current.getNext(); 
 			else return;
 		}
-		currentHead.setNext(currentHead.getNext().getNext());//Once node in the middle is found, set its head to the next's next
+		current.setNext(current.getNext().getNext()); //Link previous node to the one two spots ahead, thus removing the middle node
 		listSize--;
 	}
 	
