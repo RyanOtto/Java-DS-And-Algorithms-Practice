@@ -6,20 +6,20 @@ import java.util.TreeMap;
 public class Main {
 	public static void main(String[] args) {
 		
-		LinkedList myList = new LinkedList();
-		myList.add(20);
-		myList.add(40);
-		myList.add(60);
-		myList.add(80);
-		myList.add(100);
+//		LinkedList myList = new LinkedList();
+//		myList.add(20);
+//		myList.add(40);
+//		myList.add(60);
+//		myList.add(80);
+//		myList.add(100);
 //		System.out.println(myList.get(1).getValue());
 //		System.out.println("Size: " + myList.getSize());
-		myList.delete(1); 
-		System.out.println(myList.toString());
-		myList.delete(3); 
+//		myList.delete(1); 
+//		System.out.println(myList.toString());
+//		myList.delete(3); 
 //		System.out.println("Size: " + myList.getSize());
 //		System.out.println(myList.get(0).getValue());
-		System.out.println(myList.toString());
+//		System.out.println(myList.toString());
 //		System.out.println(myList.getValue(7));
 		
 //		Queue myQueue = new Queue();
@@ -54,15 +54,15 @@ public class Main {
 //        
 //        System.out.println(tree.search(50).getLeft().getKey());
 //		
-//		HashMap hm = new HashMap();
-//		hm.put(0, 20);
-//		hm.put(1, 100);
-//		hm.put(1, 150);
-//		hm.put(1, 2000);
-//		System.out.println(hm.get(0));
-//		System.out.println(hm.get(1));
-//		System.out.println(hm.get(2));
-//		System.out.println(hm.get(3));
+		HashMap hm = new HashMap(10);
+		hm.put(0, 20);
+		hm.put(1, 100);
+		hm.put(2, 150);
+		hm.put(3, 2000);
+		System.out.println(hm.get(0));
+		System.out.println(hm.get(1));
+		System.out.println(hm.get(2));
+		System.out.println(hm.get(3));
 		
 //		TreeMap tm = new TreeMap();
 //	    tm.put("Alison", new Integer(1));
@@ -71,7 +71,7 @@ public class Main {
 //	    tm.put("Jose", new Integer(4));
 //	    tm.put("Lilian", new Integer(5));
 //	    
-//	    //Place tm's contents into a set, use an iterator to go through the set, ouptut each key-value pair
+//	    //Place tm's contents into a set, use an iterator to go through the set, output each key-value pair
 //	    Set set = tm.entrySet();
 //	    Iterator i = set.iterator();
 //	    while(i.hasNext()) {
