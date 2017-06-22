@@ -1,31 +1,25 @@
-
 public class Queue {
 		private LinkedList list;
 		
-		public Queue()
-		{
+		public Queue(){
 			list = new LinkedList();
 		}
 
-		public boolean isEmpty()
-		{
+		public boolean isEmpty(){
 			return(list.getSize()==0);
 		}
 
-		public void enqueue(int value) //Add node to back
-		{
+		public void enqueue(int value){  //Add node to back
 			list.add(value);
 		}
 
-		public Node dequeue() //Remove front Node
-		{
+		public Node dequeue(){ //Remove front Node
 			Node node = list.get(0);
 			list.delete(0);
 			return node;
 		}
 
-		public Node peek() //Return front Node
-		{
+		public Node peek(){ //Return front Node
 			return list.get(0);
 		}
 }
