@@ -1,8 +1,10 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.Map.Entry;
 
 public class Main {
 
@@ -54,15 +56,15 @@ public class Main {
 //        
 //        System.out.println(tree.search(50).getLeft().getKey());
 //		
-//		HashMap hm = new HashMap();
-//		hm.put(0, 20);
-//		hm.put(1, 100);
-//		hm.put(1, 150);
-//		hm.put(1, 2000);
-//		System.out.println(hm.get(0));
-//		System.out.println(hm.get(1));
-//		System.out.println(hm.get(2));
-//		System.out.println(hm.get(3));
+		HashMap<Character, Integer> hm=new HashMap<Character, Integer>();
+		//Given a string, print each character alongside its number of occurrences in the string using a hashmap
+		String str="teststring";
+		for(int i=0; i<str.length(); i++) hm.put( str.charAt(i), ( hm.get(str.charAt(i))==null ? 1 : hm.get(str.charAt(i))+1) );
+		for (Entry<Character, Integer> entry : hm.entrySet()){
+			Character key = entry.getKey();
+			Integer value = entry.getValue();
+			System.out.println(key + " " + value);
+		}
 		
 //		TreeMap tm = new TreeMap();
 //	    tm.put("Alison", new Integer(1));
@@ -92,6 +94,8 @@ public class Main {
 //		insertionSort(myArray);
 		shellSort(myArray);
 		System.out.println("Array after sorting: " + Arrays.toString(myArray));
+		
+		
 }
 	
 	  public static void shellSort(int[] array) {
