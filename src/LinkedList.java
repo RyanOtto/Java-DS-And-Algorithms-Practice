@@ -7,13 +7,28 @@ public class LinkedList {
 		listSize = 0;
 	}
 	
-	public void add(int value){
+	public void add(int value){ //Add at the end
 		Node newNode = new Node(null, value);
 		Node current = head;
 		while(current.getNext()!=null){ //Go to last element
 			current=current.getNext();
 		}
 		current.setNext(newNode); //Set old last node's next to the new last node
+		listSize++;
+	}
+	
+	public void add(int index, int value){ //Add at a specified index
+		Node insert=new Node(null,value);
+		Node temp=head;
+		for(int i=0; i<index; i++){
+			if(temp.getNext()!=null) temp=temp.getNext(); //Move to specified index-1
+			else return;
+		}
+		if(temp.getNext()==null) temp.setNext(insert); //If at the end, add to the end
+		else{ //If not at the end
+			insert.setNext(temp.getNext());
+			temp.setNext(insert);
+		}
 		listSize++;
 	}
 	

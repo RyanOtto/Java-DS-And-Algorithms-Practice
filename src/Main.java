@@ -11,10 +11,10 @@ public class Main {
 	public static void main(String[] args) {
 		
 //		LinkedList myList = new LinkedList();
-//		myList.add(20);
-//		myList.add(40);
+//		myList.add(0,20);
+//		myList.add(0,40);
 //		myList.add(60);
-//		myList.add(80);
+//		myList.add(3,80);
 //		myList.add(100);
 //		System.out.println(myList.get(1).getValue());
 //		System.out.println("Size: " + myList.getSize());
@@ -28,6 +28,12 @@ public class Main {
 //		Queue myQueue = new Queue();
 //		myQueue.enqueue(1);
 //		myQueue.enqueue(30);
+//		myQueue.enqueue(20);
+//		myQueue.enqueue(15);
+//		System.out.println(myQueue.peek().getValue());
+//		myQueue.dequeue();
+//		System.out.println(myQueue.peek().getValue());
+//		myQueue.dequeue();
 //		System.out.println(myQueue.peek().getValue());
 //		myQueue.dequeue();
 //		System.out.println(myQueue.peek().getValue());
@@ -38,6 +44,9 @@ public class Main {
 //		myStack.push(40);
 //		System.out.println( myStack.peek().getValue() );	
 //		myStack.push(60);
+//		System.out.println( myStack.peek().getValue() );
+//		myStack.pop();
+//		myStack.pop();
 //		System.out.println( myStack.peek().getValue() );
 		
 //        BinaryTree tree = new BinaryTree(10);
@@ -56,15 +65,31 @@ public class Main {
 //        
 //        System.out.println(tree.search(50).getLeft().getKey());
 //		
-		HashMap<Character, Integer> hm=new HashMap<Character, Integer>();
-		//Given a string, print each character alongside its number of occurrences in the string using a hashmap
-		String str="teststring";
-		for(int i=0; i<str.length(); i++) hm.put( str.charAt(i), ( hm.get(str.charAt(i))==null ? 1 : hm.get(str.charAt(i))+1) );
-		for (Entry<Character, Integer> entry : hm.entrySet()){
-			Character key = entry.getKey();
-			Integer value = entry.getValue();
-			System.out.println(key + " " + value);
-		}
+//		HashMap<Character, Integer> hm=new HashMap<Character, Integer>();
+//		//Given a string, print each character alongside its number of occurrences in the string using a hashmap
+//		String str="teststring";
+//		for(int i=0; i<str.length(); i++) hm.put( str.charAt(i), ( hm.get(str.charAt(i))==null ? 1 : hm.get(str.charAt(i))+1) );
+//		for (Entry<Character, Integer> entry : hm.entrySet()){
+//			Character key = entry.getKey();
+//			Integer value = entry.getValue();
+//			System.out.println(key + " " + value);
+//		}
+		
+//		int a=9;
+//		int ones=0;
+//		while(a>0){
+//			if(a%2!=0){
+//				ones++;
+//				a-=a/2+1;
+//			}
+//			else a-=a/2;
+//			if(a==1){
+//				ones++;
+//				break;
+//			}
+//		}
+//		System.out.println("Ones: " + ones);
+
 		
 //		TreeMap tm = new TreeMap();
 //	    tm.put("Alison", new Integer(1));
@@ -81,19 +106,19 @@ public class Main {
 //	       System.out.print(me.getKey() + ": ");
 //	       System.out.println(me.getValue());
 		
-		int[] myArray = {2,3,1,6,5,7,8,1,8,10,20,100,50,40,30,300,20,10};
+//		int[] myArray = {2,3,1,6,5,7,8,1,8,10,20,100,50,40,30,300,20,10};
 //		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 //		quickSort(myArray, 0, myArray.length-1);
 //		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 		
-		System.out.println("Array before sorting: " + Arrays.toString(myArray));
+//		System.out.println("Array before sorting: " + Arrays.toString(myArray));
 //		quickSort(myArray, 0, myArray.length-1);
 //		mergeSort(myArray, 0, myArray.length-1);
 //		bubbleSort(myArray);
 //		selectionSort(myArray);
 //		insertionSort(myArray);
-		shellSort(myArray);
-		System.out.println("Array after sorting: " + Arrays.toString(myArray));
+//		shellSort(myArray);
+//		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 		
 		
 }

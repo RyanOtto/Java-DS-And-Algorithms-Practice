@@ -13,18 +13,18 @@ public class Stack {
 
 	public void push(int value)
 	{
-		list.add(value);
+		list.add(0,value);
 	}
 
 	public Node pop()
 	{
-		Node node = list.get(list.getSize()-1);
-		list.delete(list.getSize()-1);
+		Node node = list.get(0);
+		list.delete(0);
 		return node;
 	}
 
 	public Node peek()
 	{
-		return list.get(list.getSize()-1);
+		return list.get(0);
 	}
 }
