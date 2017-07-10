@@ -28,16 +28,10 @@ public class Main {
 //		Queue myQueue = new Queue();
 //		myQueue.enqueue(1);
 //		myQueue.enqueue(30);
-//		myQueue.enqueue(20);
-//		myQueue.enqueue(15);
 //		System.out.println(myQueue.peek().getValue());
 //		myQueue.dequeue();
 //		System.out.println(myQueue.peek().getValue());
-//		myQueue.dequeue();
-//		System.out.println(myQueue.peek().getValue());
-//		myQueue.dequeue();
-//		System.out.println(myQueue.peek().getValue());
-		
+
 //		Stack myStack = new Stack();
 //		myStack.push(20);
 //		System.out.println( myStack.peek().getValue() );	
@@ -64,46 +58,6 @@ public class Main {
 //        tree.postOrder();
 //        
 //        System.out.println(tree.search(50).getLeft().getKey());
-//		
-//		HashMap<Character, Integer> hm=new HashMap<Character, Integer>();
-//		//Given a string, print each character alongside its number of occurrences in the string using a hashmap
-//		String str="teststring";
-//		for(int i=0; i<str.length(); i++) hm.put( str.charAt(i), ( hm.get(str.charAt(i))==null ? 1 : hm.get(str.charAt(i))+1) );
-//		for (Entry<Character, Integer> entry : hm.entrySet()){
-//			Character key = entry.getKey();
-//			Integer value = entry.getValue();
-//			System.out.println(key + " " + value);
-//		}
-
-		
-//		TreeMap tm = new TreeMap();
-//	    tm.put("Alison", new Integer(1));
-//	    tm.put("Pif", new Integer(2));
-//	    tm.put("Sona", new Integer(3));
-//	    tm.put("Jose", new Integer(4));
-//	    tm.put("Lilian", new Integer(5));
-//	    
-//	    //Place tm's contents into a set, use an iterator to go through the set, ouptut each key-value pair
-//	    Set set = tm.entrySet();
-//	    Iterator i = set.iterator();
-//	    while(i.hasNext()) {
-//	       Map.Entry me = (Map.Entry)i.next();
-//	       System.out.print(me.getKey() + ": ");
-//	       System.out.println(me.getValue());
-		
-//		int[] myArray = {2,3,1,6,5,7,8,1,8,10,20,100,50,40,30,300,20,10};
-//		System.out.println("Array before sorting: " + Arrays.toString(myArray));
-//		quickSort(myArray, 0, myArray.length-1);
-//		System.out.println("Array after sorting: " + Arrays.toString(myArray));
-		
-//		System.out.println("Array before sorting: " + Arrays.toString(myArray));
-//		quickSort(myArray, 0, myArray.length-1);
-//		mergeSort(myArray, 0, myArray.length-1);
-//		bubbleSort(myArray);
-//		selectionSort(myArray);
-//		insertionSort(myArray);
-//		shellSort(myArray);
-//		System.out.println("Array after sorting: " + Arrays.toString(myArray));
 		
 		
 }

@@ -40,7 +40,6 @@ public class TestStructuresModule {
 		int[] unsortedArray={3,1,5,2,4,0};
 		int[] sortedArray={0,1,2,3,4,5};
 		Main.quickSort(unsortedArray, 0, unsortedArray.length-1);
-		System.out.println(Arrays.toString(unsortedArray));
 		assertEquals(Arrays.toString(unsortedArray), Arrays.toString(sortedArray));
 	}
 	
