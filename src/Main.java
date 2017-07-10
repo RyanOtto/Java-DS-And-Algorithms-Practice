@@ -74,21 +74,6 @@ public class Main {
 //			Integer value = entry.getValue();
 //			System.out.println(key + " " + value);
 //		}
-		
-//		int a=9;
-//		int ones=0;
-//		while(a>0){
-//			if(a%2!=0){
-//				ones++;
-//				a-=a/2+1;
-//			}
-//			else a-=a/2;
-//			if(a==1){
-//				ones++;
-//				break;
-//			}
-//		}
-//		System.out.println("Ones: " + ones);
 
 		
 //		TreeMap tm = new TreeMap();
@@ -188,7 +173,7 @@ public class Main {
 			if (array == null || array.length == 0) return;
 			if (left >= right) return;
 	 
-			int middle = (left + right) / 2;
+			int middle = (left+right)/2+1;
 			int i = left, j = right;
 			
 			while (i < j) {
@@ -208,7 +193,7 @@ public class Main {
 			if (right > i) quickSort(array, i, right);
 		}
 			
-	    private static void mergeSort(int[] array, int left, int right) {
+	    public static void mergeSort(int[] array, int left, int right) {
 	        if(left < right) { //If there's more than 1 element in the list
 	            int center = (left + right) / 2; //Center point for list splitting
 	            mergeSort(array, left, center); //Sort from beginning to center
